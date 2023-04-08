@@ -22,13 +22,6 @@ const persons=[
     {id:1,name:'Jane'}
 ];
 
-router.use((req, res) => {
-  res.status(404);
-  res.json({
-    error: "Page not found"
-  });
-});
-
 router.get("/", (req, res) => {
   res.json("Hello world!!");
 });
@@ -44,6 +37,13 @@ router.post("/person", (req, res) => {
   res.status(201).set('Location', '/persons').json(p);
 })
 
+
+router.use((req, res) => {
+  res.status(404);
+  res.json({
+    error: "Page not found"
+  });
+});
 
 port = process.env.PORT || 8080;
 
