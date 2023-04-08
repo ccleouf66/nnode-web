@@ -5,7 +5,7 @@
     "express": ">=4.18.2"
   },
   "scripts": {
-    "start": "node web.js"
+    "start": "node main.js"
   },
   "engines": {
     "node": ">=16"
