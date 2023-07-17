@@ -45,7 +45,7 @@ router.use((req, res) => {
   });
 });
 
-port = process.env.PORT || 8080;
+port = process.env.APP_PORT || 8080;
 
 app.listen(port, () => {
    console.log('Server app listening on port ' + port);
